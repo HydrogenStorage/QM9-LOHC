@@ -1,6 +1,6 @@
 # Overview of the G4MP2 Computation Method:
 
-G4MP2 is a high-level composite method used for calculating molecular energies with high accuracy. The method is designed to achieve near chemical accuracy by combining several different levels of theory and basis sets in a sequential approach. Below is a step-by-step outline of how G4MP2 is executed in Gaussian1–3:
+G4MP2 is a high-level composite method used for calculating molecular energies with high accuracy. The method is designed to achieve near chemical accuracy by combining several different levels of theory and basis sets in a sequential approach. Below is a step-by-step outline of how G4MP2 is executed in Gaussian:
 1.	Initial Geometry Optimization and Frequency Calculation:
 o	The geometry of the molecule is first optimized using the B3LYP functional with a mid-sized basis set (6-31G(2df,p)). 
 o	A frequency calculation is performed at this level to confirm that the optimized geometry corresponds to a local minimum (no imaginary frequencies).
@@ -13,4 +13,10 @@ o	CCSD(T) Calculation: Coupled-cluster with single, double, and perturbative tri
 o	Additional Hartree-Fock calculations are conducted using larger basis sets (GFHFB3 and GFHFB4) to refine the Hartree-Fock energy component further. These steps help to improve the convergence and accuracy of the calculation.
 4.	Combining Results for Final Energy Estimation:
 o	The results from the MP2, CCSD(T), and Hartree-Fock calculations are combined according to the G4MP2 protocol to provide a final, high-accuracy estimate of the molecular energy. This combination effectively balances the computational cost with the need for high precision.
+
+### References
+(1)	Curtiss, L. A.; Redfern, P. C.; Raghavachari, K. Gaussian-4 Theory Using Reduced Order Perturbation Theory. The Journal of Chemical Physics 2007, 127 (12), 124105. https://doi.org/10.1063/1.2770701.
+(2)	Curtiss, L. A.; Redfern, P. C.; Raghavachari, K. Gaussian-4 Theory. The Journal of Chemical Physics 2007, 126 (8), 084108. https://doi.org/10.1063/1.2436888.
+(3)	Curtiss, L. A.; Redfern, P. C.; Raghavachari, K. G n Theory. WIREs Comput Mol Sci 2011, 1 (5), 810–825. https://doi.org/10.1002/wcms.59.
+
 
